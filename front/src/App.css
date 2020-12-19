@@ -40,3 +40,11 @@ cursor: pointer;
 .menu_logo {
   color: Green;
 }
+
+.card_rait {
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 7px;
+  flex-direction: column;
+  align-content: center;
+}

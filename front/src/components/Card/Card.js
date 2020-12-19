@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Raiting from '../Raiting/Raiting'
 
 const Card = ({product}) => {
 // const{product} = props
@@ -23,6 +24,7 @@ const Card = ({product}) => {
         {product.name}
       </div>
       </Link>
+      <Raiting rating ={product.rating} numReviews={product.numReviews} />
     <div className="card_price">
       {product.price} <span>$</span>
     </div>

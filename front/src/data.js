@@ -9,7 +9,8 @@ const data = {
       price: 60,
       brand: ' Nike',
       rating: 4.5,
-      numReviews: 10
+      numReviews: 10,
+      countInStock: 0,
     },
     {
       _id: '2',
@@ -20,7 +21,8 @@ const data = {
       price: 50,
       brand: ' Nike',
       rating: 4.2,
-      numReviews: 5
+      numReviews: 5,
+      countInStock: 10,
     },
     {
       _id: '3',
@@ -31,7 +33,8 @@ const data = {
       price: 70,
       brand: ' Nike',
       rating: 4.5,
-      numReviews: 8
+      numReviews: 8,
+      countInStock: 5,
     }, {
       _id: '4',
       name: 'Best Pants',
@@ -41,7 +44,8 @@ const data = {
       price: 70,
       brand: ' Nike',
       rating: 4.5,
-      numReviews: 8
+      numReviews: 8,
+      countInStock: 0,
     },
   ]
 }

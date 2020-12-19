@@ -1,5 +1,6 @@
 import React from 'react'
 import data from '../../data'
+import Raiting from '../Raiting/Raiting'
 
 const Detail = (props) => {
   const product = data.products.find(item=>item._id === props.match.params.id)
@@ -19,8 +20,11 @@ const Detail = (props) => {
             <div className="detail_title flex">category: <p>{product.category}</p></div>
             <div className="detail_title flex">brend:<p>{product.brand}</p></div>
             <div className="detail_title flex">Цена:<p><strong>{product.price}$</strong></p></div>
-            <div className="detail_title flex">Сатус:<p><strong>{product.price}$</strong></p></div>
-  <div className="detail_title flex"><p>{product.rating}</p>--Stars{product.numReviews}</div>
+            <div className="detail_title flex">Сатус:<p>
+              <strong>
+              {product.countInStock > 0 ? <div> есть в наличии</div>:<div>товара нет</div>}
+              </strong></p></div>
+            <Raiting rating ={product.rating} numReviews={product.numReviews} />
   <div className="detail_title flex">Колличество:<p>
     <select name="" id="">
       <option value="">1</option>
