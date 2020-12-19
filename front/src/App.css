@@ -1,0 +1,42 @@
+.menu_hidden {
+  transition: .3s;
+  width: 250px;
+  position: fixed;
+  height: 100vh;
+  background: #000;
+  top: 0px;
+  left:0px;
+  margin-left: -250px;
+ z-index: 100;
+ color:#fff
+}
+.visi {
+  margin-left: 0px;
+}
+.menu {
+  position: relative;
+}
+.menu .close {
+  color:#fff;
+  display: inline-block;
+  cursor: pointer;
+}
+.menu_ikon {
+cursor: pointer;
+}
+.detail_wrap_foto img {
+  width: 300px;
+}
+.detail_info {
+  margin-left: 40px;
+}
+.detail_wrap {
+  display: flex;
+
+}
+.detail {
+  padding: 70px 0px;
+}
+.menu_logo {
+  color: Green;
+}
