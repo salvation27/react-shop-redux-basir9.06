@@ -1,0 +1,26 @@
+{
+  "name": "react-shop-redux-basir9.06",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch back --exec node --experimental-modules back/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvation27/react-shop-redux-basir9.06.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salvation27/react-shop-redux-basir9.06/issues"
+  },
+  "homepage": "https://github.com/salvation27/react-shop-redux-basir9.06#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
