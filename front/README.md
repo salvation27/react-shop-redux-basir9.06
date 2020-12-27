@@ -10,3 +10,10 @@
 1  npm i redux react-redux
 2  create store.js
 
+
+-генерация селекта колличества товара на странице Подробно
+
+
+3/22
+localStorage for Cart
+3.38
