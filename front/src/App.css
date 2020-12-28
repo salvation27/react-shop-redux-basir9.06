@@ -73,3 +73,17 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
 }
+.cart_link {
+  color:red
+}
+.cart_link:hover {
+  color:red
+}
+.cart_link_full {
+font-weight: 500;
+color:rgb(41, 44, 240)
+}
+.cart_link_full:hover {
+  text-decoration: underline;
+  color:rgb(41, 44, 240)
+  }

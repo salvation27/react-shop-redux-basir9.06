@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MessageBox = () => {
+const MessageBox = (props) => {
   return (
-    <div>
-      Произошла ошибка при загрузке карточек товара
+    <div className={`alert alert-${props.variant || 'info'}`}>
+      {props.children}
     </div>
   )
 }

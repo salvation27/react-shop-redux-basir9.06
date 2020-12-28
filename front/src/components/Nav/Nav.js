@@ -35,14 +35,20 @@ const Nav = () => {
             <Link to='/'>
             <div className="menu_logo">{logo}</div>
             </Link>
-          <div className="menu_cart flex">
-            <p>в корзине</p>
-            <div className="menu_cart_num">
-              {
-                cartItems.length
-              }
-            </div>
-          </div>
+
+
+            <Link to='/cart' className={cartItems.length > 0 ? 'cart_link_full': 'cart_link'}>
+              <div className="menu_cart flex">
+                <p>в корзине</p>
+                <div className="menu_cart_num">
+                  {
+                    cartItems.length
+                  }
+                </div>
+              </div>
+            </Link>
+
+
           </div>
           </div>
         </div>

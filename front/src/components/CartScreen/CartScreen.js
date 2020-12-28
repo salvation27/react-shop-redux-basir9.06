@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import {addToCart}  from '../../actions/cartActions'
+import {addToCart,removeFromCart}  from '../../actions/cartActions'
 import {useDispatch ,useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 
@@ -13,7 +13,7 @@ const CartScreen = (props) => {
   const productId = props.match.params.id
   const qty = props.location.search ? Number(props.location.search.split('=')[1]):1
   const cart =useSelector(state=>state.cart)
-const {cartItems} = cart
+  const {cartItems} = cart
   const dispatch = useDispatch()
   useEffect(() => {
     if(productId){
@@ -23,12 +23,14 @@ const {cartItems} = cart
 
 
   const removeFromCartHandler =(id)=>{
-
+    console.log('cart-screen',id);
+   dispatch(removeFromCart(id))
   }
 
   const checkoutHandler =()=>{
 props.history.push('/signin?redirect=shippening')
   }
+  console.log();
   return (
     <div className="container">
     <div className='row top cart_cart'>
@@ -40,7 +42,10 @@ props.history.push('/signin?redirect=shippening')
           {
             cartItems.length === 0 ? 
             // <MessageBox />
-            <MessageBox>Корзина пустая<Link to='/'>на главную</Link></MessageBox> 
+            <MessageBox>
+              Корзина пустая
+              <Link to='/'>на главную</Link>
+              </MessageBox> 
             : 
             (
             <ul>
@@ -72,7 +77,7 @@ props.history.push('/signin?redirect=shippening')
                       </select>
                     </div>
                       <div>${x.price}*{x.qty}</div>
-                    <div onClick={()=>removeFromCartHandler(x.poduct)}>Удалить</div>
+                    <div onClick={()=>removeFromCartHandler(x.product)}>Удалить</div>
                   </div>
                 </li>
               ))}
